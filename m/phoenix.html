@@ -1445,11 +1445,11 @@ System ready. Welcome, User.
     // --- DATABASE LOADING ---
     async function loadDatabases() {
       try {
-        const moviesResp = await fetch('Movie.json');
+        const moviesResp = await fetch('https://7-7-7-15.github.io/Movies.json');
         moviedb = moviesResp.ok ? await moviesResp.json() : [];
       } catch { moviedb = []; }
       try {
-        const tvResp = await fetch('TV.json');
+        const tvResp = await fetch('https://7-7-7-15.github.io/Tv.json');
         tvdb = tvResp.ok ? await tvResp.json() : [];
       } catch { tvdb = []; }
       databasesLoaded = true;
